@@ -26,7 +26,7 @@ from zetanize import zetanize
 forms = zetanize(html)
 ```
 
-Well that's it! Just feed zetanize a HTML document and it will give you a dict of actional form data.<br>
+Well that's it! Just feed zetanize a HTML document and it will give you a dict of actionable form data.<br>
 Let's parse https://google.com for getting familiar:
 ```python
 from requests import get
