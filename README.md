@@ -12,9 +12,6 @@
   <a href="https://github.com/s0md3v/zetanize/releases">
     <img src="https://img.shields.io/github/release/s0md3v/zetanize.svg">
   </a>
-  <a href="https://travis-ci.com/s0md3v/zetanize">
-    <img src="https://img.shields.io/travis/com/s0md3v/zetanize.svg">
-  </a>
   <a href="https://github.com/s0md3v/zetanize/issues?q=is%3Aissue+is%3Aclosed">
       <img src="https://img.shields.io/github/issues-closed-raw/s0md3v/zetanize.svg">
   </a>
@@ -30,7 +27,17 @@ forms = zetanize(html)
 ```
 
 Well that's it! Just feed zetanize a HTML document and it will give you a dict of actional form data.<br>
-Here's a sample output of https://google.com:
+Let's parse https://google.com for getting familiar:
+```python
+from requests import get
+from zetanize import zetanize
+
+html = get('https://google.com').text
+forms = zetanize(html)
+```
+
+Here's the output:
+
 ```json
 {
   "0": {
